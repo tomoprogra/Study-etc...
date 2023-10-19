@@ -1,0 +1,63 @@
+タマ.追いかける（ネズミ）
+
+class 猫
+  def 追いかける（ネズミ）
+    puts "一生懸命#{ネズミ}を追いかけた"  #メッセージを出力
+  end
+end
+
+タマ = 猫.new
+
+> label = "氏名"
+=> "氏名"
+
+class User
+  def name=(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+end
+
+user = User.new
+user.name = "とも"
+=> "とも"
+
+user.name
+=> "とも"
+
+class MyClass
+  def method_1
+    number = 100
+  end
+
+  def method_2
+    number
+  end
+end
+
+object = MyClass.new
+object.method_1
+=> 100
+
+object.method_2
+...NameError(..............)
+
+class MyClass
+  def method_1
+    @number = 100
+  end
+
+  def method_2
+    @number
+  end
+end
+
+object = MyClass.new
+object.method_1
+=>100
+
+object.method_2
+=>100

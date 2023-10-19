@@ -1,0 +1,22 @@
+My SQLに接続する
+
+$ docker compose up
+
+$ docker compose exec db bash
+
+# mysql -u root -p
+
+Enter password: example
+
+show databases;　と打ち込んでデータベース一覧
+
+MySQLから抜けるには
+my> exit
+
+DBを作成する
+
+mysql> create database name_study;
+
+Railsでは以下のコマンドで同じSQLが実行
+
+$ rails db:create
