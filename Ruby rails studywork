@@ -61,3 +61,46 @@ object.method_1
 
 object.method_2
 =>100
+
+ゲッターセッターを簡単に定義する。
+
+class User
+  attr_accessor :name
+end
+ここに渡している:nameというのはシンボル、
+名前の先頭に：をつけたものがシンボル
+
+attr_readerだけだとゲッター
+attr_writer だけだとセッター
+
+一般的に、ユーザーの名前だけでなく、住んでる場所や
+Eメールアドレスも扱いたい時は
+
+class User
+  attr_accessor :name, :address, :email
+
+このようなUserクラスを使って、次のようにオブジェクトを利用できる。
+
+user = User.new
+user.name = "とも"
+=> "とも”
+user.address = "千葉"
+=> "千葉
+
+オブジェクトのメソッドの中から、同じオブジェクトの他のメソッドを呼び出すことができる
+例
+class User
+  attr_accessor :name, :address, :email
+
+  def profile
+    "#{name}(#{address})"
+  end
+end
+
+user = User.new
+user.name = "とも"
+user.address = "千葉"
+user.profile
+=>"とも（千葉）"
+
+シングルクォーテーションはダメ
