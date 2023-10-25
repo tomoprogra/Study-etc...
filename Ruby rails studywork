@@ -78,6 +78,7 @@ Eメールアドレスも扱いたい時は
 
 class User
   attr_accessor :name, :address, :email
+end
 
 このようなUserクラスを使って、次のようにオブジェクトを利用できる。
 
@@ -91,6 +92,7 @@ user.address = "千葉"
 例
 class User
   attr_accessor :name, :address, :email
+end
 
   def profile
     "#{name}(#{address})"
@@ -104,3 +106,20 @@ user.profile
 =>"とも（千葉）"
 
 シングルクォーテーションはダメ
+
+配列「Array」
+[1,2,3]
+["abc", false, nil, 4, [1, 2, 3]]
+
+each メソッド
+
+# 1, 2, 3 と順番に出力します
+a.each do |element|
+  puts element
+end
+
+配列に要素を追加するには、<< を使う
+a = [1, 2, 3]
+a << 4
+
+{:tokyo => 13636222, :kanagawa => 9145572}
