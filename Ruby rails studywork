@@ -123,3 +123,7 @@ a = [1, 2, 3]
 a << 4
 
 {:tokyo => 13636222, :kanagawa => 9145572}
+
+options = { font_size: 100, color: 'red'}
+# 「100」と出力される
+puts options[:font_size]
