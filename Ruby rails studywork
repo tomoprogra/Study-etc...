@@ -144,3 +144,78 @@ message1
 =>こんにちは こんばんは
 message2
 => こんばんは
+
+User.new
+
+class User
+  def initialize
+    puts 'Initialized'
+  end
+end
+User.new
+=>Initialized
+
+class User
+  def initialize(name, age)
+    puts "name: #{name}, age: #{age}"
+  end
+end
+User.new 
+=> ArgumentError:
+User.new("Alice", 20)
+=>name: Alice, age: 20
+
+class Person
+  def initialize(name)
+    @name = name  # インスタンス変数に引数の値を設定
+  end
+
+  def greet
+    "Hello, my name is #{@name}!"
+  end
+end
+
+# Personクラスのオブジェクトを作成する
+person = Person.new("Alice")
+
+# オブジェクトのメソッドを呼び出す
+puts person.greet  # => "Hello, my name is Alice!"
+
+class Dog
+  def initialize(name)
+    @name = name
+  end
+
+  # インスタンスメソッド
+  def speak
+    "#{@name} says Woof!"
+  end
+end
+
+# インスタンスを作成
+my_dog = Dog.new("Buddy")
+
+# インスタンスメソッドを呼び出す
+puts my_dog.speak  # 出力: Buddy says Woof!
+
+
+class Dog
+  @@number_of_dogs = 0
+
+  def initialize(name)
+    @name = name
+    @@number_of_dogs += 1
+  end
+
+  # クラスメソッド
+  def self.total_dogs
+    "Total number of dogs: #{@@number_of_dogs}"
+  end
+end
+
+# インスタンスを2つ作成
+dog1 = Dog.new("Buddy")
+dog2 = Dog.new("Max")
+
+# クラスメソッドを呼び出す
+puts Dog.total_dogs  # 出力: Total number of dogs: 2
