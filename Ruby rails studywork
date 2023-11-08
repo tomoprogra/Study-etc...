@@ -219,4 +219,5 @@ dog2 = Dog.new("Max")
 
 # クラスメソッドを呼び出す
 puts Dog.total_dogs  # 出力: Total number of dogs: 2
-1
+
+end
