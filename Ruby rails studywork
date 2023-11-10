@@ -221,3 +221,4 @@ dog2 = Dog.new("Max")
 puts Dog.total_dogs  # 出力: Total number of dogs: 2
 
 end
+end
